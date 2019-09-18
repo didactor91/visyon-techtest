@@ -1,0 +1,147 @@
+@import '../../../common/MediaMixins.sass'
+
+.contactFormCont
+    padding-top: 1.25rem
+    margin-bottom: .625rem
+    height: auto
+    width: 100%
+    display: flex
+    justify-content: space-around
+    align-items: center
+
+    @include media(portable)
+        flex-direction: column-reverse
+        padding: 0
+
+.contactFormArea
+    display: flex
+    width: 31.25rem
+    height: 44rem
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+
+    @include media(tablet)
+        width: 100%
+        height: 27.8125rem
+
+    @include media(phone)
+        width: 100%
+        height: 46.8125rem
+
+.contactFormTitleCont
+    margin: 0 0 1.250rem 1.250rem
+    font-size: 3.125rem
+    display: flex
+    width: 31.25rem
+    flex-direction: column
+    text-align: left
+
+    @include media(tablet)
+        width: auto
+        margin: 0 0 1.250rem 0
+
+    @include media(phone)
+        font-size: 2.225rem
+        width: 20.4375rem
+        margin: 0 0 1.250rem 0
+
+.contactFormTitle1
+    color: rgba(29,31,36,1)
+
+.contactFormTitle2
+    color: rgba(255,255,255,1)
+
+
+
+.contactFormText
+    width: 30rem
+    height: 5.625rem
+    text-align: justify
+    color: rgba(255,255,255,1)
+
+    @include media(tablet)
+        width: 27.8125rem
+
+    @include media(phone)
+        width: 20.4375rem
+
+.contactFormShield
+    display: flex
+    width: 31.25rem
+    height: 100%
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+
+    @include media(tablet)
+        width: 27.8125rem
+
+    @include media(phone)
+        width: 100%
+
+
+.contactFormInput
+    font-size: 1rem
+    width: 30rem
+    height: 5rem
+    text-indent: .5125rem
+    border: white .0875rem solid
+    background-color: rgba(0,0,0,0)
+    color: white
+
+    @include media(tablet)
+        width: 26.825rem
+        height: 2.25rem
+
+    @include media(phone)
+        width: 20.4375rem
+
+.contactFormInput::placeholder
+    color: white
+    opacity: 1
+
+.contactFormButton
+    box-sizing: content-box
+    background-color: rgba(29,31,36,1)
+    display: flex
+    width: 30rem
+    height: 5rem
+    font-size: 1.5rem
+    justify-content: center
+    align-items: center
+    text-decoration: none
+    color: white
+
+    @include media(tablet)
+        width: 26.825rem
+        height: 2.25rem
+
+    @include media(phone)
+        width: 20.4375rem
+
+.contactFormButton:hover
+    background-color: rgba(255,255,255,0.8)
+    color: black
+
+.contactPhoto
+    width: 43.75rem
+    height: 44rem
+    display: flex
+    align-items: center
+    justify-content: center
+
+    @include media(tablet)
+        width: 100%
+        height: 26.25rem
+
+    @include media(phone)
+        width: 100%
+        height: 23.4375rem
+
+.contactImgItem
+    width: 100%
+    height: 100%
+    background-image: url(https://picsum.photos/id/4/561/374)
+    background-size: cover
+    background-repeat: no-repeat

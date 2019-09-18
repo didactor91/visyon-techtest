@@ -1,0 +1,163 @@
+@import '../../../common/MediaMixins.sass'
+
+
+.footerDataCont
+    height: 100%
+    width: 100%
+    box-sizing: border-box
+    display: flex
+    flex-flow: wrap
+
+    @include media(portable)
+        flex-direction: row
+        justify-content: space-around
+
+.footerDataDuo
+    margin: .625rem
+    height: 9rem
+    width: 10%
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: center
+
+    @include media(tablet)
+        height: auto
+        width: auto
+
+    @include media(phone)
+        height: auto
+        width: 100%
+        align-items: flex-start
+        justify-content: space-around
+        order: 1
+
+.footerDataDuo2
+    margin: .625rem
+    height: 9rem
+    width: 20%
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+
+    @include media(tablet)
+        margin-left: 2.25rem
+        flex-direction: row-reverse
+        height: auto
+        width: 100%
+        justify-content: flex-end
+        align-items: center
+
+    @include media(phone)
+        height: auto
+        width: 100%
+        flex-direction: column-reverse
+        align-items: flex-start
+        justify-content: space-around
+        order: 2
+
+.sectionsCont
+    margin-left: .625rem
+    height: 100%
+    width: 60%
+    display: flex
+
+    @include media(tablet)
+        width: auto
+        height: auto
+
+    @include media(phone)
+        height: auto
+        width: 100%
+        flex-flow: wrap
+        order: 3
+
+.sectionsContDuo
+    margin-left: .625rem
+    width: 80%
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: center
+
+    @include media(phone)
+        margin: 0
+        width: 40%
+
+.sectionsItem
+    margin: .625rem
+    color: rgba(255,255,255,1)
+    text-decoration: none
+
+
+.sectionsItem:hover
+    opacity: .5
+
+.sectionsContItem
+    display: flex
+    align-items: center
+
+.newsletterSubsButton
+    box-sizing: content-box
+    background-color: rgba(255,86,92,1)
+    width: 8rem
+    height: 2rem
+    text-align: center
+    color: white
+    border: 0
+
+    @include media(portable)
+        width: 7.825rem
+        height: 2.2rem
+
+.newsletterSubsButton:hover
+    opacity: .9
+
+.newsletterSubsCont
+    display: inline-block
+    width: 100%
+    height: auto
+    margin: .225rem
+
+    @include media(tablet)
+        width: 18.75rem
+
+.newsletterSubsInput
+    text-indent: .5125rem
+    width: 9.8rem
+    height: 2rem
+    border: 0
+
+    @include media(portable)
+        width: 9.825rem
+        height: 2.2rem
+
+.newsletterSubsShield
+    display: flex
+    flex-direction: row
+    width: 100%
+
+.copyrightCont
+    color: rgba(255,255,255,1)
+    font-size: .6rem
+    display: flex
+    flex-direction: column
+    margin: .225rem
+
+
+.footerLogoItem
+    width: 4.375rem
+    height: auto
+
+.socialMediaCont
+    margin: 1.25rem
+    color: white
+
+.faIcon
+    margin: .8rem
+
+
+.faIcon:hover
+    opacity: .5
+

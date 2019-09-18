@@ -1,0 +1,111 @@
+@import '../../../common/MediaMixins.sass'
+
+.headerDataCont
+    height: 100%
+    width: 100%
+    box-sizing: border-box
+    display: flex
+    justify-content: space-between
+
+
+.menuCont
+    margin-left: .625rem
+    height: 100%
+    width: 100%
+    display: flex
+
+    @include media(portable)
+        display: none
+
+.logoCont
+    height: 100%
+    min-width: 4.375rem
+    max-width: 5.625rem
+    display: flex
+    align-items: center
+
+.topLogo
+    width: 4.375rem
+    height: auto
+
+.menuItem
+    text-decoration: none
+    margin: .625rem
+    color: rgba(29,31,36,.7)
+
+.menuItem:hover
+    color: rgba(0,0,0,1)
+
+.menuContItem
+    display: flex
+    align-items: center
+
+
+.hamburgerCont
+    height: 4.375rem
+    min-width: 4.375rem
+    max-width: 5.625rem
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    webkit-user-select: none;
+    user-select: none;
+
+    @include media(desktop)
+        display: none
+
+    @include media(tablet) 
+        height: 5.625rem
+
+.hamburgerCont span
+    width: 1.5rem
+    height: .1825rem
+    background-color: rgba(29,31,36,1)
+    margin: .375rem 0
+    border-radius: .2125rem
+    opacity: .5
+
+
+
+.hamburgerCont:active
+    background-color: rgba(255,86,92,1)
+
+
+.menuHamburgerCont
+    display: none
+    height: 18.75rem
+    width: 13.2rem
+    z-index: 99
+    background-color: rgba(29,31,36,1)
+
+.menuHambContItem
+    font-size: 1.5rem
+    background-color: rgba(29,31,36,1)
+
+.menuHambItem
+    padding: .8125rem
+    font-size: 1.4rem
+    height: 23.125rem
+    width: 100%
+    color: white
+    text-indent: .625rem
+    text-decoration: none
+    background-color: rgba(29,31,36,1)
+
+.menuHambItem:hover
+    color: rgba(255,86,92,1)
+
+.hamburgerNav
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+
+.inputHamburger
+    display: none
+
+.inputHamburger:checked
+    ~
+        .menuHamburgerCont
+            display: flex
+            flex-direction: column
