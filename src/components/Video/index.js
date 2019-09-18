@@ -21,21 +21,18 @@ class Video extends Component {
     }
 
     componentDidMount() {
-        (async () => {
-        const {items}= await videoLogic.SearchVideo(useApi, firstSearch)
-        this.setState({
-            videos: items,
-            videoPlay: items[0],
-        })})()
+        (async() => this.handleSearchVideo(useApi, firstSearch))()
     }
 
     handleSearchVideo = async (use, term) => {
 
         try {
             const {items} = await videoLogic.SearchVideo(use, term)
+            debugger
+            const {items: video} = await videoLogic.SelectVideo(items[0].id.videoId)
             this.setState({
                 videos: items,
-                videoPlay: items[0],
+                videoPlay: video[0],
             })
         }
         catch ({ message }) {
@@ -43,10 +40,17 @@ class Video extends Component {
         }
     }
 
-    handleSelectVideo = (selected) => {
-        this.setState({
-            videoPlay: selected
-        })
+    handleSelectVideo = async (videoID) => {
+        try{
+            debugger
+            const {items: video} = await videoLogic.SelectVideo(videoID)
+            this.setState({
+                videoPlay: video[0]
+            })
+        }
+        catch ({ message }) {
+            this.setState({ error: message })
+        }
     }
 
     render() {

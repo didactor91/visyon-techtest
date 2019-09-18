@@ -6,7 +6,8 @@ import './styles.sass'
 const VideoInfo = (props) => {
 
     const {video} = props
-    const {snippet:{channelTitle,title,description}} = video
+    debugger
+    const {snippet:{channelTitle,title,description}, statistics:{viewCount,likeCount,commentCount}} = video
 
     return (
 
@@ -23,9 +24,9 @@ const VideoInfo = (props) => {
             </div>
             <hr/>
             <div className="videoInfoFooter">
-                <div><FontAwesomeIcon icon={faShare} />{Math.floor(Math.random()*1365)}</div>
-                <div><FontAwesomeIcon icon={faEye} />{Math.floor(Math.random()*7659)}</div>
-                <div><FontAwesomeIcon icon={faCommentAlt} />{Math.floor(Math.random()*650)}</div>
+                <div><FontAwesomeIcon icon={faShare} />{likeCount}</div>
+                <div><FontAwesomeIcon icon={faEye} />{viewCount}</div>
+                <div><FontAwesomeIcon icon={faCommentAlt} />{commentCount}</div>
             </div>
         </div>
     )

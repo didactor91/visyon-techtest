@@ -7,7 +7,7 @@ const MiniVideo = ({ video, onSelectVideo }) => {
 
     function handleSelectVideo(e){
         e.preventDefault()
-        onSelectVideo(video)
+        onSelectVideo(video.id.videoId)
 
     }
 

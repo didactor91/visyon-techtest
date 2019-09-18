@@ -1,7 +1,7 @@
 import videoLogic from './VideoLogic'
 import {RequirementError} from '../../common/errors'
 
-
+const API_KEY = process.env.REACT_APP_API_KEY
 const results = 10
 const resultsOffline = require('../../common/fixedResults.json')
 
