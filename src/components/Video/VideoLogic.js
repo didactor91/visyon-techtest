@@ -33,10 +33,8 @@ const videoLogic = {
         ])
 
         return (async () => {
-            debugger
             const apiUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet%2Cstatistics&id=${videoID}&maxResults=1&key=${API_KEY}`
             const data = await fetch(apiUrl)
-            debugger
             return data.json()
         }
         )()

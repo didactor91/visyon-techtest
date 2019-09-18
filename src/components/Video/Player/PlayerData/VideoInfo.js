@@ -6,7 +6,6 @@ import './styles.sass'
 const VideoInfo = (props) => {
 
     const {video} = props
-    debugger
     const {snippet:{channelTitle,title,description}, statistics:{viewCount,likeCount,commentCount}} = video
 
     return (

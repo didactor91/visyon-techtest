@@ -28,7 +28,6 @@ class Video extends Component {
 
         try {
             const {items} = await videoLogic.SearchVideo(use, term)
-            debugger
             const {items: video} = await videoLogic.SelectVideo(items[0].id.videoId)
             this.setState({
                 videos: items,
@@ -42,7 +41,6 @@ class Video extends Component {
 
     handleSelectVideo = async (videoID) => {
         try{
-            debugger
             const {items: video} = await videoLogic.SelectVideo(videoID)
             this.setState({
                 videoPlay: video[0]
